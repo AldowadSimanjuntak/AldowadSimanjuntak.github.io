@@ -1,192 +1,956 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!--my css-->
-    <link rel="stylesheet" href="./css/styles.css"/>
-    <!--Boot Strap Icons-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
-    <title>Portofolio Aldowad Simanjuntak</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aldowad Simanjuntak</title>
+    <link rel="stylesheet" href="Libraries/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Css/style.css" />
   </head>
-  <body id="home">
-    <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-danger fixed-top"
-    >
-        <div class="container">
-          <a class="navbar-brand" href="#">Website Portofolio Aldowad</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
+  <body>
+    <!-- header  -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav-logo">Aldowad Simanjuntak</a>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="#home" class="nav-link"
+                ><i class="fa-solid fa-house nav-icon"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link"
+                ><i class="fa-solid fa-user nav-icon"></i> About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link"
+                ><i class="fa-solid fa-file nav-icon"></i> Skills</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link"
+                ><i class="fa-solid fa-briefcase nav-icon"></i> Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link"
+                ><i class="fa-solid fa-image nav-icon"></i> Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link"
+                ><i class="fa-solid fa-message nav-icon"></i> Contact</a
+              >
+            </li>
+          </ul>
+          <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-btns">
+          <!-- theme btn  -->
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
           </div>
         </div>
       </nav>
-<!--akhir navbar-->
+    </header>
 
-<!--Jumbotron-->
-<section class="jumbotron text-center">
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./images/html.jpg" width="400px" height="200px" alt="HTML">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/css.png" width="400px" height="200px" alt="CSS">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/javascript.png" width="400px" height="200px" alt="JavaScript">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <img src="./images/fotoprofil.jpg" alt="Aldowad Simanjuntak" width="200" class="rounded-circle img-thumbnail mt-5" >
-  <h1 class="display-4">Aldowad Simanjuntak</h1>
-  <p class="lead">College | Front End Developer</p>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L30,181.3C60,203,120,245,180,218.7C240,192,300,96,360,53.3C420,11,480,21,540,69.3C600,117,660,203,720,197.3C780,192,840,96,900,53.3C960,11,1020,21,1080,48C1140,75,1200,117,1260,117.3C1320,117,1380,75,1410,53.3L1440,32L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
-</section>
-<!--Akhir Jumbotron-->
+    <main class="main">
+      <section class="home section" id="home">
+        <div class="home-container container grid">
+          <div class="home-content grid">
+            <div class="home-social">
+              <a
+                href="https://www.linkedin.com/in/aldowadsimanjuntak"
+                target="_blank"
+                class="home-social-icon"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/aldowad_simanjuntak/"
+                target="_blank"
+                class="home-social-icon"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://github.com/AldowadSimanjuntak"
+                target="_blank"
+                class="home-social-icon"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
 
-<!--about-->
-<section id="about">
-  <div class="container">
-    <div class="row text-center mb-3">
-      <div class="col">
-        <h1>About Me</h1>
-      </div>
-    </div>
+            <div class="home-img">
+              <div class="home-blob">
+                <img class="home-blob-img" src="Assets/Icons/Profil_Aldowad.png" alt="Profile Image">
+              </div>
+            </div>            
 
-    <div class="row text-center fs-3 mb-3">
-      <div class="col">
-        <p>Nama Saya Aldowad Simanjuntak. Saya seorang mahasiswa Sains dan Teknologi dari Universitas Prima Indonesia. Hobi saya membaca dan bermain game. Saat ini saya sedang belajar HTML,CSS,dan Javascript dalam pengembangan website. Dan juga mengikuti pelatihan mengenai Oracle Cloud untuk menjadi Cloud Developer </p>
-      </div>
-    </div>
-   
-  </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff8282" fill-opacity="1" d="M0,160L30,181.3C60,203,120,245,180,261.3C240,277,300,267,360,224C420,181,480,107,540,96C600,85,660,139,720,176C780,213,840,235,900,208C960,181,1020,107,1080,90.7C1140,75,1200,117,1260,122.7C1320,128,1380,96,1410,80L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
-</section>
-<!--akhir about-->
-
-<!--Projects-->
-<section id="projects">
-  <div class="container">
-    <div class="row text-center mb-3">
-      <div class="col">
-        <h1>My Projects</h1>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-4 mb-3">
-        <div class="card">
-          <img src="./images/html.jpg" class="card-img-top" alt="HTML" width="200" height="250">
-          <div class="card-body">
-            <h5 class="card-title">HTML</h5>
-            <p class="card-text">HTML adalah singkatan dari HyperText Markup Language yaitu bahasa pemrograman standar yang digunakan untuk membuat sebuah halaman web, yang kemudian dapat diakses untuk menampilkan berbagai informasi di dalam sebuah penjelajah web Internet (Browser). HTML dapat juga digunakan sebagai link link antara file-file dalam situs atau dalam komputer dengan menggunakan localhost, atau link yang menghubungkan dunia internet.</p>
+            <div class="home-data">
+              <h1 class="home-title">Hi, I am Aldowad Simanjuntak</h1>
+              <h3 class="home-subtitle">Cloud & Backend Developer</h3>
+              <p class="home-description">
+                A passionate Cloud & Backend developer from Indonesia
+              </p>
+              <a href="#contact" class="button button-flex">
+                Contact Me <i class="fa-regular fa-envelope button-icon"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="badge-container">
+            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=B1D1B044B54DA992A195CE70FCD043D0E4C5F3740C8DA6985F5138335CE757DC">
+              <img src="https://raw.githubusercontent.com/AldowadSimanjuntak/Badge/main/Badge%20Oracle%20Cloud%20Infrastructure%202023%20Certified%20DevOps%20Professional.png" alt="Oracle Cloud Infrastructure Certified DevOps Professional" width="230" height="140">
+            </a>
+            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=09DA50D9AEF67910756BEF49A81B6617952C2CA7939E53911C923CE4A3AC5F55">
+              <img src="https://raw.githubusercontent.com/AldowadSimanjuntak/Badge/main/Badge%20Oracle%20Cloud%20Infrastructure%20Foundation%202023.png" alt="Oracle Cloud Infrastructure 2023 Certified Foundations Associate" width="230" height="140">
+            </a>
+            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=949ADAF9EB7BD33404540A91CC7C2AC9DE03E478BED88C2CBA48E8568B229C70">
+              <img src="https://raw.githubusercontent.com/AldowadSimanjuntak/Badge/main/Badge%20Oracle%20Cloud%20Data%20Management%202023%20Certified%20Foundations%20Associate.png" alt="Oracle Cloud Data Management 2023 Certified Foundations Associate" width="230" height="140">
+            </a>
+            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=B057D1ED6BA4A5CC4CEF9614F196925CB01970FD03C281A399F4DEEBC2199914">
+              <img src="https://raw.githubusercontent.com/AldowadSimanjuntak/Badge/main/Badge%20Oracle%20Cloud%20Infrastructure%202023%20AI%20Foundations%20Associate.png" alt="Oracle Cloud Infrastructure Certified DevOps Professional" width="230" height="140">
+            </a>
+          </div>
+          
+          <div class="home-scroll">
+            <a href="#about" class="home-scroll-button button-flex">
+              <!-- <i class="fa-solid fa-computer-mouse home-scroll-mouse"></i> -->
+              <img class="home-scroll-mouse" src="Assets/mouse.svg" alt="" />
+              <span class="home-scroll-name">Scroll down</span>
+              <i class="fa-solid fa-angles-down home-scroll-arrow"></i>
+            </a>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <div class="card">
-          <img src="./images/css.png" class="card-img-top" alt="CSS" width="200" height="250">
-          <div class="card-body">
-            <h5 class="card-title">CSS</h5>
-            <p class="card-text">CSS adalah kepanjangaan dari Cascading Style Sheets yang berguna untuk menyederhanakan proses pembuatan website dengan mengatur elemen yang tertulis di bahasa markup.CSS dipakai untuk mendesain halaman depan atau tampilan website (front end). CSS menangani tampilan dan ‘rasa’ dari halaman website.Ada banyak hal yang dapat Anda lakukan menggunakan CSS dibandingkan dengan bahasa pemrograman inti seperti HTML dan PHP.</p>
+      </section>
+
+      <section class="about section" id="about">
+        <h2 class="section-title">About Me</h2>
+        <span class="section-subtitle">My Introduction</span>
+
+        <div class="about-container container grid">
+          <img src="Assets/Icons/aboutme.png" alt="" class="about-img" />
+
+          <div class="about-data">
+            <p class="about-description">
+              I am a recent graduate from Universitas Prima Indonesia with a degree in Information Systems. 
+              I have actively pursued my interest by participating in training and courses focused on cloud technologies and Backend Development.
+              I am committed to staying updated with the latest advancements in the field , ensuring that I remain at the forefront of technological innovation.
+            </p>
+
+            <div class="about-info">
+              <div>
+                <span class="about-info-title">02+</span>
+                <span class="about-info-name"
+                  >Years <br />
+                  experience</span
+                >
+              </div>
+              <div>
+                <span class="about-info-title">10+</span>
+                <span class="about-info-name"
+                  >Completed <br />
+                  project</span
+                >
+              </div>
+              <div>
+                <span class="about-info-title">04+</span>
+                <span class="about-info-name"
+                  >Companies <br />
+                  worked</span
+                >
+              </div>
+            </div>
+
+            <div class="about-buttons">
+              <a
+                download=""
+                href="/Assets/Resume Aldowad Simanjuntak.pdf"
+                class="button button-flex"
+              >
+                Download My Resume<i
+                  class="fa-solid fa-file-arrow-down button-icon"
+                ></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <div class="card">
-          <img src="./images/bootstrap.png" class="card-img-top" alt="Bootstrap" width="200" height="250">
-          <div class="card-body">
-            <h5 class="card-title">Bootstrap</h5>
-            <p class="card-text">Bootstrap adalah framework HTML, CSS, dan JavaScript yang berfungsi untuk mendesain website responsive dengan cepat dan mudah. Kemudahan yang ditawarkan oleh Bootstrap adalah Anda tak perlu coding komponen website dari nol. Framework ini tersusun dari kumpulan file CSS dan JavaScript berbentuk class yang tinggal pakai. Bootstrap bersifat responsive berkat grid system yang digunakan. Sistem grid  menyesuaikan bentuk layout  website Anda.</p>
+      </section>
+
+      <!-- skills and qualification  -->
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <span class="section-subtitle">My Technical Skills</span>
+        <div class="skills-content container">
+          <div class="skills-name">HTML</div>
+          <div class="skills-name">CSS</div>
+          <div class="skills-name">Tailwind CSS</div>
+          <div class="skills-name">Bootstrap</div>
+          <div class="skills-name">JavaScript</div>
+          <div class="skills-name">Typescript</div>
+          <div class="skills-name">Python</div>
+          <div class="skills-name">React JS</div>
+          <div class="skills-name">Node JS</div>
+          <div class="skills-name">Express JS</div>
+          <div class="skills-name">MongoDB</div>
+          <div class="skills-name">OAuth 2.0</div>
+          <div class="skills-name">Agile Development</div>
+          <div class="skills-name">GraphQL API Development</div>
+          <div class="skills-name">Git/Github</div>
+          <div class="skills-name">JWT</div>
+          <div class="skills-name">Microservices Architecture</div>
+          <div class="skills-name">Nginx Web Server</div>
+          <div class="skills-name">RESTful API Design</div>
+          <div class="skills-name">Google Cloud Platform (GCP)</div>
+          <div class="skills-name">Oracle Cloud Infrastructure (OCI)</div>
+          
+        </div>
+      </section>
+      <section class="qualification section">
+        <h2 class="section-title">Qualification</h2>
+        <span class="section-subtitle">My journey</span>
+
+        <div class="qualification-container container">
+          <div class="qualification-tabs">
+            <div
+              class="qualification-button button-flex qualification-active"
+              data-target="#education"
+            >
+              <i class="fa-solid fa-graduation-cap qualification-icon"></i>
+              Education
+            </div>
+            <div class="qualification-button button-flex" data-target="#work">
+              <i class="fa-solid fa-briefcase qualification-icon"></i>
+              Work
+            </div>
+          </div>
+
+          <div class="qualification-section">
+            <div
+              class="qualification-content qualification-active"
+              data-content
+              id="education"
+            >
+            <!-- qualifi 1 -->
+            <div class="qualification-data">
+              <div>
+                <h3 class="qualification-title">
+                  Cloud Computing Cohort
+                </h3>
+                <span class="qualification-subtitle">Bangkit by Google,GoTo & Traveloka</span>
+                <div class="qualification-date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  August - Desember 2023
+                </div>
+              </div>
+              <div>
+                <span class="qualification-round"></span>
+                <span class="qualification-line"></span>
+              </div>
+            </div>
+            <!-- qualifi 2 -->
+            <div class="qualification-data">
+                <div></div>
+
+                <div>
+                  <span class="qualification-round"></span>
+                  <span class="qualification-line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification-title">
+                    Backend Engineer 
+                  </h3>
+                  <span class="qualification-subtitle">Fresh Graduate Academy by Digitalents</span>
+                  <div class="qualification-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    September - November 2023
+                  </div>
+                </div>
+              </div>
+
+              <!-- qualifi 3 -->
+              <div class="qualification-data">
+                <div>
+                  <h3 class="qualification-title">
+                    Bachelor Degree of Information System
+                  </h3>
+                  <span class="qualification-subtitle">University Prima Indonesia</span>
+                  <div class="qualification-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    2019 - 2023
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification-round"></span>
+                  <span class="qualification-line"></span>
+                </div>
+              </div>
+
+              <!-- qualifi 4 -->
+              <div class="qualification-data">
+                <div></div>
+
+                <div>
+                  <span class="qualification-round"></span>
+                  <span class="qualification-line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification-title">
+                    Oracle Cloud Infrastructure 
+                  </h3>
+                  <span class="qualification-subtitle">Fresh Graduate Academy by Digitalents</span>
+                  <div class="qualification-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    January - July 2023
+                  </div>
+                </div>
+              </div>
+
+              <!-- qualifi 5 -->
+              <div class="qualification-data">
+                <div>
+                  <h3 class="qualification-title">Oracle Cloud DevOps Engineer</h3>
+                  <span class="qualification-subtitle">Oracle University</span>
+                  <div class="qualification-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    January 2023- Presents
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification-round"></span>
+                  <span class="qualification-line"></span>
+                </div>
+              </div>
+
+              <!-- qualifi 6 -->
+              <div class="qualification-data">
+                <div></div>
+                <div>
+                  <span class="qualification-round"></span>
+                </div>
+                <div>
+                  <h3 class="qualification-title">Scholarship Student of Program ICE Institute</h3>
+                  <span class="qualification-subtitle">Indonesia Cyber Education Institute</span>
+                  <div class="qualification-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    January - July 2022
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- qualific content 2  -->
+            <div class="qualification-content" data-content id="work">
+              <!-- qualifi 1 -->
+              <div class="qualification-data">
+                <div>
+                  <h3 class="qualification-title">Full Stack Developer</h3>
+                  <span class="qualification-subtitle">PT Qwords Company International</span>
+                  <div class="qualification-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    November 2023
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification-round"></span>
+                  <span class="qualification-line"></span>
+                </div>
+              </div>
+
+              <!-- qualifi 2 -->
+              <div class="qualification-data">
+                <div></div>
+                <div>
+                  <span class="qualification-round"></span>
+                  <span class="qualification-line"></span>
+                </div>
+                <div>
+                  <h3 class="qualification-title">Full Stack Developer</h3>
+                  <span class="qualification-subtitle">PT BTPN</span>
+                  <div class="qualification-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    October 2023
+                  </div>
+                </div>
+              </div>
+
+              <!-- qualifi 3 -->
+              <div class="qualification-data">
+                <div>
+                  <h3 class="qualification-title">Quality Assurance Engineer</h3>
+                  <span class="qualification-subtitle">PT Jubelio</span>
+                  <div class="qualification-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    September 2023
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification-round"></span>
+                  <span class="qualification-line"></span>
+                </div>
+              </div>
+
+              <!-- qualifi 4 -->
+              <div class="qualification-data">
+                <div></div>
+                <div>
+                  <span class="qualification-round"></span>
+                  <span class="qualification-line"></span>
+                </div>
+                <div>
+                  <h3 class="qualification-title">Database Administrator</h3>
+                  <span class="qualification-subtitle">Kalbe Nutritionals (PT Sanghiang Perkasa)</span>
+                  <div class="qualification-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    August 2023
+                  </div>
+                </div>
+              </div>
+
+              <!-- qualifi 5 -->
+              <div class="qualification-data">
+                <div>
+                  <h3 class="qualification-title">Junior Software Developer</h3>
+                  <span class="qualification-subtitle"> Secretariat of the Regional Representative Council (DPRD) of North Sumatra</span>
+                  <div class="qualification-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    January - March 2022
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification-round"></span>
+                </div>
+              </div>
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L30,90.7C60,85,120,75,180,96C240,117,300,171,360,192C420,213,480,203,540,176C600,149,660,107,720,90.7C780,75,840,85,900,106.7C960,128,1020,160,1080,160C1140,160,1200,128,1260,117.3C1320,107,1380,117,1410,122.7L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
-</section>
-<!--Akhir Projects-->
+      </section>
 
-<!--Contact-->
-<section id="contact">
-  <div class="container">
-    <div class="row text-center mb-3">
-      <h1>Contact Me</h1>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <form>
-        <div class="mb-3">
-          <label for="Name" class="form-label">Nama Lengkap</label>
-          <input type="text" class="form-control" id="name" aria-describedby="name">
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="email">          
-        </div>
-        <div class="mb-3">
-          <label for="Pesan" class="form-label">Pesan</label>
-          <textarea class="form-control" id="pesan" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Kirim</button>
-      </form>
-    </div>
-  </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff8282" fill-opacity="1" d="M0,128L40,128C80,128,160,128,240,112C320,96,400,64,480,42.7C560,21,640,11,720,37.3C800,64,880,128,960,170.7C1040,213,1120,235,1200,224C1280,213,1360,171,1400,149.3L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-</section>
-<!--Akhir Contact-->
+      <section class="services section" id="services">
+        <h2 class="section-title">Services</h2>
+        <span class="section-subtitle">What I offer</span>
 
-<!--Footer-->
-  <footer class="text-white text-center fs-3" >
-    <figure class="text-end text-black">
-      <blockquote class="blockquote">
-        <p>"Progamming is not about typing. It's about Thinking"</p>
-      </blockquote>
-      <figcaption class="blockquote-footer">
-        Rich <cite title="Source Title">Hakey</cite>
-      </figcaption>
-    </figure>
-    <span class="badge bg-danger">Created by Aldowad Simanjuntak</span>
-    <br>
-    <a href="https://www.instagram.com/aldowad_simanjuntak/"><i class="bi bi-instagram text-primary fs-1"></i></a> <a href="https://wa.me/6285358588697"<i class="bi bi-whatsapp text-success fs-1"></i></a> <a href="https://www.youtube.com/channel/UCo0BWB1EkA_ywfiAyC6OPOw"><i class="bi bi-youtube text-danger fs-1"></i></a>
-  </footer>
-<!--Akhir Footer-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <div class="services-container container grid">
+          <!-- service 1  -->
+          <div class="services-content">
+            <div>
+              <i class="fa-solid fa-code services-icon"></i>
 
+              <h3 class="services-title">
+                Frontend <br />
+                Development
+              </h3>
+            </div>
+            <span
+              class="button button-flex button-small button-link services-button"
+            >
+              View more
+              <i class="fa-solid fa-arrow-right button-icon"></i>
+            </span>
+
+            <div class="services-box">
+              <div class="services-box-content">
+                <h4 class="services-box-title">
+                  Frontend <br />
+                  Development
+                </h4>
+                <i class="fa-solid fa-xmark services-box-close"></i>
+
+                <ul class="services-box-services grid">
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>Responsive Web Design</p>
+                  </li>
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>Interactive User Interfaces</p>
+                  </li>
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>SEO-Friendly Implementations</p>
+                  </li>
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>Accessibility and UX Enhancement</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- service 2  -->
+          <div class="services-content">
+            <div>
+              <i class="fa-brands fa-uikit services-icon"></i>
+              <h3 class="services-title">
+                Backend <br />
+                Development
+              </h3>
+            </div>
+            <span
+              class="button button-flex button-small button-link services-button"
+            >
+              View more
+              <i class="fa-solid fa-arrow-right button-icon"></i>
+            </span>
+
+            <div class="services-box">
+              <div class="services-box-content">
+                <h4 class="services-box-title">
+                  Backend  <br />
+                  Developer
+                </h4>
+                <i class="fa-solid fa-xmark services-box-close"></i>
+
+                <ul class="services-box-services grid">
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>Server-side Development</p>
+                  </li>
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>API Design and Integration</p>
+                  </li>
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>Database Management</p>
+                  </li>
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>Server Optimization and Scalability</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- service 3  -->
+          <div class="services-content">
+            <div>
+              <i class="fa-solid fa-hashtag services-icon"></i>
+              <h3 class="services-title">
+                Cloud<br />
+                Development
+              </h3>
+            </div>
+            <span
+              class="button button-flex button-small button-link services-button"
+            >
+              View more
+              <i class="fa-solid fa-arrow-right button-icon"></i>
+            </span>
+
+            <div class="services-box">
+              <div class="services-box-content">
+                <h4 class="services-box-title">
+                  Cloud <br />
+                  Developer
+                </h4>
+                <i class="fa-solid fa-xmark services-box-close"></i>
+
+                <ul class="services-box-services grid">
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>Cloud Infrastructure Design and Deployment</p>
+                  </li>
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>Serverless Architecture</p>
+                  </li>
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>Cloud Services Integration (Google Cloud  & Oracle Cloud)</p>
+                  </li>
+                  <li class="services-box-list">
+                    <i
+                      class="fa-regular fa-circle-check services-list-icon"
+                    ></i>
+                    <p>DevOps and Continuous Integration/Continuous Deployment (CI/CD)</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- portfolio -->
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section-title">Projects</h2>
+        <span class="section-subtitle">Most recent work</span>
+
+        <div class="portfolio-container container swiper-container">
+          <div class="swiper-wrapper">
+            <!-- project1  -->
+            <div class="portfolio-content grid swiper-slide">
+              <img src="Assets/project1.jpg" alt="" class="portfolio-img" />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">Banking System API</h3>
+                <p class="portfolio-description">
+                  Build from scratch RESTful API. Have Menu registration, login, forgot password, reset password, and a user dashboard.
+                  For CRUD, have 3 endpoint : User, Transaction, and Bank-Account.
+                </p>
+                <a
+                  href="https://github.com/AldowadSimanjuntak/Banking-System"
+                  target="_blank"
+                  class="button button-flex button-small portfolio-button"
+                  >Documentation
+                  <i class="fa-solid fa-arrow-right button-icon"></i
+                ></a>
+                <a
+                  href="https://dull-lime-elephant-cape.cyclic.app/"
+                  target="_blank"
+                  class="button button-flex button-small portfolio-button"
+                  >Live Demo
+                  <i class="fa-solid fa-arrow-right button-icon"></i
+                ></a>
+              </div>
+            </div>
+            <!-- project2  -->
+            <div class="portfolio-content grid swiper-slide">
+              <img src="Assets/project2.jpg" alt="" class="portfolio-img" />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">API Endpoint Personalized Profile Picture</h3>
+                <p class="portfolio-description">
+                  Build API that allows users to upload and manage their profile images.
+                  Using  GoLang, PostgreSQL JSON Web Tokens for auth.
+                </p>
+                <a
+                  href="https://github.com/AldowadSimanjuntak/Task-PBI-btpns-Creating-API-Endpoints-with-Personalized-Profile-Picture-Feature"
+                  target="_blank"
+                  class="button button-flex button-small portfolio-button"
+                  >Documentation
+                  <i class="fa-solid fa-arrow-right button-icon"></i
+                ></a>
+              </div>
+            </div>
+            <!-- project3  -->
+            <div class="portfolio-content grid swiper-slide">
+              <img src="Assets/project3.jpg" alt="" class="portfolio-img" />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">Statistical Analysis and Population Growth Prediction of Countries</h3>
+                <p class="portfolio-description">
+                  This research was Utilized Oracle Cloud Infrastructure for deployment, Oracle SQL Developer for preprocessing data, and Analysis with Oracle Machine Learning, using progamming language Python and SQL.
+                </p>
+                <a
+                  href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
+                  target="_blank"
+                  class="button button-flex button-small portfolio-button"
+                  >Documentation
+                  <i class="fa-solid fa-arrow-right button-icon"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- project 4  -->
+            <div class="portfolio-content grid swiper-slide">
+              <img src="Assets/project4.jpg" alt="" class="portfolio-img" />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">Portfolio Websites</h3>
+                <p class="portfolio-description">
+                  This website is my personal portfolio that contain all my skills & projects. Self Development with HTML, CSS and Javascript. Deployed in Github Pages.
+                </p>
+                <a
+                  href="https://github.com/AldowadSimanjuntak/AldowadSimanjuntak.github.io"
+                  target="_blank"
+                  class="button button-flex button-small portfolio-button"
+                  >Documentation
+                  <i class="fa-solid fa-arrow-right button-icon"></i
+                ></a>
+                <a
+                  href="https://aldowad.my.canva.site/portofolio"
+                  target="_blank"
+                  class="button button-flex button-small portfolio-button"
+                  >Live Demo
+                  <i class="fa-solid fa-arrow-right button-icon"></i
+                ></a>
+              </div>
+            </div>
+            <!-- project5 -->
+            <div class="portfolio-content grid swiper-slide">
+              <img src="Assets/project5.jpg" alt="" class="portfolio-img" />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">Predicting Pulp Export Values In Indonesia Using The Long Short-Term Memory Method</h3>
+                <p class="portfolio-description">
+                  This research project represents the culmination of my undergraduate journey in Information Systems.
+                  The focus  to predicting the export values using Machine Learning
+                </p>
+                <a
+                  href="https://github.com/harisahmad59/Hypefolio"
+                  target="_blank"
+                  class="button button-flex button-small portfolio-button"
+                  >Documentation
+                  <i class="fa-solid fa-arrow-right button-icon"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-angles">
+            <div class="swiper-button-next">
+              <i class="fa-solid fa-angle-right swiper-icon"></i>
+            </div>
+            <div class="swiper-button-prev">
+              <i class="fa-solid fa-angle-left swiper-icon"></i>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- portfolio -->
+      <section class="project-contact section">
+        <div class="project-bg">
+          <div class="project-container container grid">
+            <div class="project-data">
+              <h2 class="project-title">Do you have a new project, Collaboration, And Work?</h2>
+              <p class="project-description">
+                Feel Free to Discuss with me
+              </p>
+              <a href="#contact" class="button button-flex button-white"
+                >Contact Me
+                <i
+                  class="fa-regular fa-comment-dots project-icon button-icon"
+                ></i>
+              </a>
+            </div>
+            <img src="Assets/Icons/contactme.png" alt="" class="project-img" />
+          </div>
+        </div>
+      </section>
+      <!-- testimonial -->
+      <section class="testimonial section">
+        <h2 class="section-title">Testimonial</h2>
+        <span class="section-subtitle">My Client saying</span>
+
+        <div class="testimonial-container container swiper-container">
+          <div class="swiper-wrapper">
+            <!-- testimonial 1  -->
+            <div class="testimonial-content swiper-slide">
+              <div class="testimonial-data">
+                <div class="testimonial-header">
+                  <img
+                    src="Assets/Icons/testimonial1.png"
+                    alt=""
+                    class="testimonial-img"
+                  />
+
+                  <div>
+                    <h3 class="testimonial-name">User 1</h3>
+                    <span class="testimonial-client">Client</span>
+                  </div>
+                </div>
+
+                <div>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                </div>
+              </div>
+              <p class="testimonial-description">
+                The website you developed,Aldowad  is a testament to your
+                creativity and expertise. Every detail showcases your dedication
+                to delivering excellence. Thank you for bringing my vision to
+                life!
+              </p>
+            </div>
+            <!-- testimonia 2 -->
+            <div class="testimonial-content swiper-slide">
+              <div class="testimonial-data">
+                <div class="testimonial-header">
+                  <img
+                    src="Assets/Icons/testimonial2.png"
+                    alt=""
+                    class="testimonial-img"
+                  />
+
+                  <div>
+                    <h3 class="testimonial-name">User 2</h3>
+                    <span class="testimonial-client">Client</span>
+                  </div>
+                </div>
+
+                <div>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                </div>
+              </div>
+              <p class="testimonial-description">
+                Aldowad, your exceptional talent and dedication shine through in
+                the stunning website you've crafted for me. It exceeds my
+                expectations in every way, and I'm truly grateful for your
+                outstanding work!
+              </p>
+            </div>
+            <!-- testimonial  3-->
+            <div class="testimonial-content swiper-slide">
+              <div class="testimonial-data">
+                <div class="testimonial-header">
+                  <img
+                    src="Assets/Icons/testimonial3.png"
+                    alt=""
+                    class="testimonial-img"
+                  />
+
+                  <div>
+                    <h3 class="testimonial-name">User 3</h3>
+                    <span class="testimonial-client">Client</span>
+                  </div>
+                </div>
+
+                <div>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                  <i class="fa-regular fa-star testimonial-icon"></i>
+                </div>
+              </div>
+              <p class="testimonial-description">
+                Aldowad is a remarkable backend developer with an eye for detail
+                and a knack for creating secure application.
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-pagination swiper-pagination-testimonial"></div>
+        </div>
+      </section>
+
+      <!-- contact me  -->
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Contact me</h2>
+        <span class="section-subtitle">Get in touch</span>
+
+        <div class="contact-container container grid">
+          <div>
+            <div class="contact-info">
+              <i class="fa-regular fa-envelope contact-icon"></i>
+              <div>
+                <h3 class="contact-title">Email</h3>
+                <a
+                  href="mailto:aldowad02@gmail.com"
+                  target="_blank"
+                  class="contact-subtitle"
+                  >aldowad02@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-info">
+              <i class="fa-brands fa-linkedin-in contact-icon"></i>
+              <div>
+                <h3 class="contact-title">Linkedin</h3>
+                <a
+                  class="contact-subtitle"
+                  href="https://www.linkedin.com/in/aldowadsimanjuntak"
+                  target="_blank"
+                  >@Aldowad Alles Sandro Hamonangan Simanjuntak</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer  -->
+      <footer class="footer">
+        <div class="footer-bg">
+          <div class="footer-container container grid">
+            <div>
+              <h1 class="footer-title">Aldowad Simanjuntak</h1>
+              <span class="footer-subtitle">Cloud & Backend Developer</span>
+            </div>
+            <ul class="footer-links">
+              <li>
+                <a href="#services" class="footer-link">Services</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="footer-link">Portfolio</a>
+              </li>
+              <li>
+                <a href="#contact" class="footer-link">Contact</a>
+              </li>
+            </ul>
+
+            <div class="footer-socials">
+              <a
+                href="https://www.linkedin.com/in/aldowadsimanjuntak"
+                target="_blank"
+                class="footer-social"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/AldowadSimanjuntak"
+                target="_blank"
+                target="_blank"
+                class="footer-social"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/aldowad_simanjuntak/"
+                target="_blank"
+                class="footer-social"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <p class="footer-copy">Developed By Aldowad</p>
+        </div>
+      </footer>
+    </main>
+
+    <a href="#home" class="scrollup" id="scroll-up">
+      <i class="fa-solid fa-arrow-up scroll-up-icon"></i>
+    </a>
+    <script src="Libraries/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b634c15bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
