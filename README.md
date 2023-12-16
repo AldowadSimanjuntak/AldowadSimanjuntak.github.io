@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a personal portfolio website showcasing the skills, projects, and information about Aldowad Simanjuntak. The website is designed to provide a glimpse into Aldowad's professional background, projects, and expertise.
+This project is a personal portfolio website showcasing the skills, projects, and information about me. The website is designed to provide a glimpse into Aldowad's professional background, projects, and expertise.
 
 Here the link for demo : [Live Demo](https://aldowadsimanjuntak.github.io/)
 ## Project Structure
@@ -11,13 +11,13 @@ The project includes the following files:
 
 1. **index.html**: The main HTML file that serves as the entry point for the website.
 
-2. **assets/**: A directory containing various assets used in the project.
+2. **assets/**: A directory containing various assets used in the project, like photo profile, project image and resume pdf.
 
-   - **css/**: This directory contains the Cascading Style Sheets (CSS) files responsible for styling the website.
+3. **css/**: 
 
-   - **libraries/**: This directory contains any external libraries or dependencies used in the project.
+   - **style.css**: This directory contains the Cascading Style Sheets (CSS) files responsible for styling the website.
 
-   - **javascript/**: This directory contains JavaScript files that enhance the interactivity and functionality of the website.
+3. **script.js**: This directory contains JavaScript files that enhance the interactivity and functionality of the website.
 
 ### Getting Started
 
