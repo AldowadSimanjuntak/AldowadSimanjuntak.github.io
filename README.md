@@ -17,7 +17,12 @@ The project includes the following files:
 
    - **style.css**: This directory contains the Cascading Style Sheets (CSS) files responsible for styling the website.
 
-3. **script.js**: This directory contains JavaScript files that enhance the interactivity and functionality of the website.
+3. **Libraries/**: 
+
+   - **swiper-bundle.min**: This directory contains the swiper bundle to responsible for styling the website with JavaScript.
+   
+4. **script.js**: This directory contains JavaScript files that enhance the interactivity and functionality of the website.
+
 
 ### Getting Started
 
