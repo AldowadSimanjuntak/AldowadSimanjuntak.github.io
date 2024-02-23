@@ -35,8 +35,16 @@ To run the project locally, follow these steps:
 ### Move to project
       cd AldowadSimanjuntak.github.io
 ### Open the index.html file in a web browser to view the portfolio website.
+
 ## Additional Notes
 This project is an ongoing effort, and updates may be made regularly to showcase new projects and skills.
 Feel free to explore the GitHub repository for the latest code and updates.
-## Feedback and Contributions
-Feedback and contributions are welcome! If you have suggestions, find issues, or want to contribute to the project, please open an issue or create a pull request on the GitHub repository.
+
+## Contribution
+Feel free to explore the codebase and documentation to gain a deeper understanding of the project.
+
+For any questions or further information, please reach out me
+
+Thank you for visiting the repository!
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
