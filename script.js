@@ -178,3 +178,65 @@ let swiperTestimonial = new Swiper(".testimonial-container", {
     },
   },
 });
+
+// animasi ketikan
+const typingTextElement = document.getElementById("typing-text");
+const phrases = [
+  "Full Stack Developer",
+  "DevOps Engineer",
+  "Backend Developer",
+  "Cloud Architect"
+];
+
+let currentPhraseIndex = 0;
+let typingSpeed = 100; // Kecepatan ketikan per huruf (ms)
+let pauseDuration = 1800; // Durasi pause setelah setiap kalimat selesai (ms)
+let eraseSpeed = 100; // Kecepatan menghapus per huruf (ms)
+
+function typePhrase() {
+  let phrase = phrases[currentPhraseIndex];
+  typingTextElement.textContent = ""; // Kosongkan teks terlebih dahulu
+  typingTextElement.classList.remove('no-blink'); // Pastikan kursor tampil selama mengetik
+  typingTextElement.classList.remove('erase'); // Hapus kelas erase jika ada
+
+  let i = 0;
+
+  // Fungsi untuk mengetik huruf
+  function typeLetter() {
+    if (i < phrase.length) {
+      typingTextElement.textContent += phrase.charAt(i);
+      i++;
+      setTimeout(typeLetter, typingSpeed); // Ketik huruf berikutnya
+    } else {
+      typingTextElement.classList.add('no-blink'); // Hilangkan kursor dan efek blink
+      setTimeout(erasePhrase, pauseDuration); // Pause setelah selesai mengetik
+    }
+  }
+
+  // Fungsi untuk menghapus huruf secara mundur
+  function erasePhrase() {
+    let j = phrase.length;
+    typingTextElement.classList.remove('no-blink'); // Tampilkan kursor
+
+    // Fungsi untuk menghapus huruf satu per satu
+    function eraseLetter() {
+      if (j >= 0) {
+        typingTextElement.textContent = phrase.substring(0, j);
+        j--;
+        setTimeout(eraseLetter, eraseSpeed); // Hapus huruf berikutnya
+      } else {
+        // Setelah menghapus semua, lanjutkan ke kata berikutnya
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        setTimeout(typePhrase, pauseDuration); // Ganti kalimat setelah erase selesai
+      }
+    }
+
+    eraseLetter(); // Mulai menghapus
+  }
+
+  typeLetter(); // Mulai mengetik huruf
+}
+
+window.onload = () => {
+  typePhrase();  // Mulai animasi ketikan saat halaman pertama kali dimuat
+};
